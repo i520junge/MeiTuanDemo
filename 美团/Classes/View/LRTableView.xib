@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LRTableView" customModule="美团" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EpC-4I-dhM">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="EIz-Td-OfY"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="aNh-jV-8BQ"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="N29-O2-viW">
+                    <rect key="frame" x="160" y="0.0" width="160" height="480"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="uJE-k2-BuB"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="3Z4-Yb-9he"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="N29-O2-viW" firstAttribute="leading" secondItem="EpC-4I-dhM" secondAttribute="trailing" id="Nta-jS-SQ6"/>
+                <constraint firstItem="N29-O2-viW" firstAttribute="width" secondItem="EpC-4I-dhM" secondAttribute="width" id="PeX-gq-ado"/>
+                <constraint firstAttribute="bottom" secondItem="EpC-4I-dhM" secondAttribute="bottom" id="TUh-u5-DrE"/>
+                <constraint firstItem="N29-O2-viW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TbH-kC-kla"/>
+                <constraint firstItem="EpC-4I-dhM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="W9m-tW-aQ0"/>
+                <constraint firstAttribute="trailing" secondItem="N29-O2-viW" secondAttribute="trailing" id="j5k-0I-8Ax"/>
+                <constraint firstAttribute="bottom" secondItem="N29-O2-viW" secondAttribute="bottom" id="qCh-fw-Lrt"/>
+                <constraint firstItem="EpC-4I-dhM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qfa-9l-Jfq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftTableView" destination="EpC-4I-dhM" id="JcU-ky-Lby"/>
+                <outlet property="rightTableView" destination="N29-O2-viW" id="KXe-7C-GL6"/>
+            </connections>
+            <point key="canvasLocation" x="31" y="82"/>
+        </view>
+    </objects>
+</document>
